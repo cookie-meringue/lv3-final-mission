@@ -1,0 +1,51 @@
+### 회원가입
+
+POST localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "email": "hello",
+  "password": "password"
+}
+
+### 로그인
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "hello",
+  "password": "password"
+}
+
+### 로그아웃
+
+POST http://localhost:8080/auth/logout
+
+### 예약 생성
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "roomId": 1,
+  "date": "2025-06-22",
+  "timeId": 1
+}
+
+### 모든 예약 조회
+GET localhost:8080/reservations
+
+### 나의 예약 조회
+GET localhost:8080/reservations/my
+
+### 예약 삭제
+DELETE localhost:8080/reservations/1
+
+### 예약 수정
+PATCH localhost:8080/reservations/1
+Content-Type: application/json
+
+{
+  "date": "2025-06-22",
+  "timeId": 2
+}
